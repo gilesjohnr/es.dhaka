@@ -7,19 +7,16 @@
     <loc>/LICENSE-text.html</loc>
   </url>
   <url>
+    <loc>/articles/es_data_template.html</loc>
+  </url>
+  <url>
+    <loc>/articles/index.html</loc>
+  </url>
+  <url>
     <loc>/authors.html</loc>
   </url>
   <url>
     <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/apply_delta_delta_ct.html</loc>
-  </url>
-  <url>
-    <loc>/reference/calc_delta_delta_ct.html</loc>
-  </url>
-  <url>
-    <loc>/reference/calc_n_copies.html</loc>
   </url>
   <url>
     <loc>/reference/compile_aquaprobe_data.html</loc>
@@ -40,10 +37,10 @@
     <loc>/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/key.html</loc>
+    <loc>/reference/key_dhaka.html</loc>
   </url>
   <url>
-    <loc>/reference/key_dhaka.html</loc>
+    <loc>/reference/key_location_names.html</loc>
   </url>
   <url>
     <loc>/reference/logmean.html</loc>

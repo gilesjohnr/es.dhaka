@@ -1,6 +1,3 @@
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/gilesjohnr/es.dhaka/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gilesjohnr/es.dhaka/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
 
 # **es.dhaka**: an R package for processing environmental sampling data
 
@@ -15,20 +12,7 @@ The tools here are intended to do the heavy lifting when combining data from mul
   
   * Data in .xlsx format containing measurements from [Aquaread water monitoring instruments](https://www.aquaread.com/)
   
-  * Geolocated climate variables
 
-
-
-## Models
-
-The package also includes methods for calculating basic quantities from qPCR data such as:
-
-  * Viral load
-  
-  * Delta delta Ct
-  
-  * Basic sampling stats and cross correlations
-  
 
 
 ## Installation

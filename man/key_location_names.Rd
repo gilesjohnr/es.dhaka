@@ -7,7 +7,7 @@
 \format{
 \subsection{\code{key_location_names}}{
 
-A data frame with 4 columns:
+A data frame with 2 columns:
 \describe{
 \item{location_name_unique}{Original location name.}
 \item{location_name_concise}{The associated concise location name with typos and duplicates removed.}
