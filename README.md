@@ -1,3 +1,6 @@
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/gilesjohnr/es.dhaka/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gilesjohnr/es.dhaka/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
 
 # **es.dhaka**: an R package for processing environmental sampling data
 
