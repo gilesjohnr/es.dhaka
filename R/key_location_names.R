@@ -1,4 +1,4 @@
-#' Master key for location names
+#' A data dictionary for location names
 #'
 #' These data serve as a key to cross reference the unique (and sometimes duplicated) location names of sampling sites
 #' and a set of 'concise' names that clean up characters and allow combination of duplicated locations.

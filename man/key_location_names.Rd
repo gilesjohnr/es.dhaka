@@ -3,7 +3,7 @@
 \docType{data}
 \name{key_location_names}
 \alias{key_location_names}
-\title{Master key for location names}
+\title{A data dictionary for location names}
 \format{
 \subsection{\code{key_location_names}}{
 

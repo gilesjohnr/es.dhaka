@@ -45,7 +45,7 @@ devtools::install_github("gilesjohnr/es.dhaka", dependencies=TRUE)
 
 
 ## Troubleshooting
-For general questions, contact John Giles (john.giles@gatesfoundation.org) and/or Jillian Gauld (jillian.gauld@gatesfoundation.org). Note that this software is made available under a [Creative Commons](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en) license and was developed for specific environmental sampling applications and therefore may not generalize perfectly to all settings.
+For general questions, contact John Giles (john.giles@gatesfoundation.org) and/or Jillian Gauld (jillian.gauld@gatesfoundation.org). Note that this software is constructed under Copyright 2024 Bill & Melinda Gates Foundation and was developed for specific environmental sampling applications and therefore may not generalize perfectly to all settings.
 
 
 ## Funding
