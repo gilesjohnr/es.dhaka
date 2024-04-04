@@ -7,7 +7,7 @@ Author: c(person("John R", "Giles", role=c("aut", "cre"), email="john.giles@gate
 Maintainer: John R Giles <john.giles@gatesfoundation.org>
 Description: Tools for processing Taqman Array Cards and other sources of environmental sampling data.
 URL: https://github.com/gilesjohnr/es.dhaka, https://gilesjohnr.github.io/es.dhaka/
-License: MIT + file LICENSE
+License: file LICENSE
 SystemRequirements: 
   Python 3,
   Java

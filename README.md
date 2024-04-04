@@ -4,7 +4,7 @@
 
 # **es.dhaka**: an R package for processing environmental sampling data
 
-This package provides reproducible functions for parsing and compiling data sets that measure infectious disease burden using Environmental Sampling (ES) methods. The tools here were developed specifically for epidemiological surveillance studies for multiple pathogens in locations such as Dhaka, Bangladesh and Karachi, Pakistan. However, the functions should generalize to other applications provided they use the same data formats. This package is currently in development and maintained by John Giles ([@gilesjohnr](https://github.com/gilesjohnr)), details on data and models below.
+This package provides reproducible functions for parsing and compiling data sets that measure infectious disease burden using Environmental Sampling (ES) methods. The tools here were developed specifically for ES studies in Dhaka, Bangladesh and are designed to provide data outputs that can be used with the open-source companion package 'es' which can be found [HERE](https://gilesjohnr.github.io/es/). An overview of data and methods are outlined below, with more detailed vignettes available [HERE]().
 
 
 ## Data
@@ -48,7 +48,7 @@ devtools::install_github("gilesjohnr/es.dhaka", dependencies=TRUE)
 
 
 ## Troubleshooting
-For general questions, contact John Giles (john.giles@gatesfoundation.org) and/or Jillian Gauld (jillian.gauld@gatesfoundation.org). Note that this software is constructed under Copyright 2024 Bill & Melinda Gates Foundation and was developed for specific environmental sampling applications and therefore may not generalize perfectly to all settings.
+This package is currently in development and maintained by John Giles ([@gilesjohnr](https://github.com/gilesjohnr)). For general questions, contact John Giles (john.giles@gatesfoundation.org) and/or Jillian Gauld (jillian.gauld@gatesfoundation.org). Note that this software is constructed under Copyright 2024 Bill & Melinda Gates Foundation and was developed for specific environmental sampling applications and not intended to generalize perfectly to all settings.
 
 
 ## Funding
