@@ -4,3 +4,6 @@
 ^data-raw$
 ^docs$
 ^.DS_Store$
+^_pkgdown\.yml$
+^pkgdown$
+^\.github$
