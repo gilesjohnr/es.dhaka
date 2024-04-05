@@ -38,6 +38,12 @@
 <li class="nav-item">
   <a class="nav-link" href="reference/index.html">Reference</a>
 </li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="articles/processing_es_data.html">Vignette Title</a>
+  </div>
+</li>
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
@@ -62,7 +68,7 @@
 <div class="page-header"><h1 id="esdhaka-an-r-package-for-processing-environmental-sampling-data">
 <strong>es.dhaka</strong>: an R package for processing environmental sampling data<a class="anchor" aria-label="anchor" href="#esdhaka-an-r-package-for-processing-environmental-sampling-data"></a>
 </h1></div>
-<p>This package provides reproducible functions for parsing and compiling data sets that measure infectious disease burden using Environmental Sampling (ES) methods. The tools here were developed specifically for ES studies in Dhaka, Bangladesh and are designed to provide data outputs that can be used with the open-source companion package ‘es’ which can be found <a href="https://gilesjohnr.github.io/es/" class="external-link">HERE</a>. An overview of data and methods are outlined below, with more detailed vignettes available <a href="">HERE</a>.</p>
+<p>This package provides data and methods for parsing and compiling data sets that measure infectious disease burden using Environmental Sampling (ES) methods. The tools here were developed specifically for ES studies in Dhaka, Bangladesh and are designed to provide data outputs that can be used with the open-source companion package <code>es</code> which can be found <a href="https://gilesjohnr.github.io/es/" class="external-link">HERE</a>. An overview of data and methods are outlined below, with more detailed vignettes available <a href="">HERE</a>.</p>
 <div class="section level2">
 <h2 id="data">Data<a class="anchor" aria-label="anchor" href="#data"></a>
 </h2>
@@ -71,6 +77,50 @@
 <li><p>Data in .eds and .xls format exported from <a href="https://www.thermofisher.com/us/en/home/life-science/pcr/real-time-pcr/real-time-pcr-instruments.html?gclid=CjwKCAiAi6uvBhADEiwAWiyRdo3P55Qq1NO8sErSvCmVGT2Cs4-5NCzYcgqYhCC6KemKTn6sw7850BoCqbkQAvD_BwE&amp;ef_id=CjwKCAiAi6uvBhADEiwAWiyRdo3P55Qq1NO8sErSvCmVGT2Cs4-5NCzYcgqYhCC6KemKTn6sw7850BoCqbkQAvD_BwE:G:s&amp;s_kwcid=AL!3652!3!606132911219!p!!g!!taqman%20applied%20biosystems!17574808700!139287686778&amp;cid=gsd_pcr_sbu_r02_co_cp1491_pjt9623_gsd00000_0se_gaw_rs_lgn_&amp;gad_source=1" class="external-link">Applied Biosystems qPCR Systems</a> using <a href="https://www.thermofisher.com/us/en/home/global/forms/life-science/quantstudio-6-7-flex-software.html" class="external-link">QuantStudio software</a>.</p></li>
 <li><p>Data in .xlsx format containing measurements from <a href="https://www.aquaread.com/" class="external-link">Aquaread water monitoring instruments</a></p></li>
 </ul>
+<p>The package also contains several important accessory data sets that are required for building compiled the data or for downstream analyses:</p>
+<ul>
+<li><p>Standard curve data for all Taqman card designs are stored in the <code>standard_curves</code> data object. Standard curves are necessary for estimating the number of gene copies for a target (e.g. viral load), the methods for which can be found in the companion R package <code>es</code>.</p></li>
+<li>
+<p>The package also contains several data dictionaries referred to as a <code>key</code> that cross reference important information about target names, location names, and standard curve data sets.</p>
+<ul>
+<li>
+<code>key_location_names</code>: These data cross reference the unique (and sometimes duplicated) location names of sampling sites and a set of ‘concise’ names that clean up characters and allow combination of duplicated locations.</li>
+<li>
+<code>key_target_names</code>: These data cross reference the unique (and sometimes duplicated) target names across all Taqman cards to concise target names, relevant control samples, and whether to include the target in the compiled data set.</li>
+<li>
+<code>key_standard_curves</code>: These data cross reference each unique experiment name to the appropriate standard curve data souce.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="methods">Methods<a class="anchor" aria-label="anchor" href="#methods"></a>
+</h2>
+<p>There are four main reproducible functions that parse raw data and compile the results into a single clean format data set. The functions are <code>parse_tac_xls</code> and <code>compile_tac_data</code> for TAC data and <code>parse_aquaprobe_xlsx</code> and <code>compile_aquaprobe_data</code> for the Aquaprobe data.</p>
+<ol style="list-style-type: decimal">
+<li><p>Parse card-level TAC data output produced by QuantStudio software and extract its contents into individual .csv files containing raw data.</p></li>
+<li>
+<p>Compile card-level .csv files into a single data set. When compiling, several QC operations are performed:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Excludes sensitive targets based on the <code>key</code> data dictionary included in this package.</p></li>
+<li><p>Parse sample IDs into collection dates and an <code>aquaprobe_id</code> used to merge with Aquaprobe data.</p></li>
+<li><p>Edit duplicated target names based on the <code>key</code> data dictionary.</p></li>
+<li><p>Adjustments to the Ct values are made using blank samples to control for contamination. Specifically, if the corresponding blank is not “Undetermined” for a pathogen in a particular sample, then that pathogen’s Ct value is set to NA for all samples on the same card as the blank and for the following two cards as well.</p></li>
+<li><p>Adjustment to Ct values based on amplification controls. Each pathogen is mapped to its corresponding control (MS2 for RNA targets and PhHV for DNA targets) as defined in the <code>key</code> data dictionary. When an amplification control in a sample is positive (Ct &lt; threshold of 40), then all relevant targets in that sample that are “Undetermined” are set to the threshold value (40 in this example).</p></li>
+<li><p>Remaining ‘Undetermined’ observations are set to NA.</p></li>
+</ol>
+</li>
+<li><p>Parse Aquaprobe excel files into .csv files with consistent format.</p></li>
+<li>
+<p>Compile raw Aquaprobe .csv files into one data set. During compilation several QC and formatting tasks are performed:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Duplicated measurements are consolidated by taking the mean of each variable.</p></li>
+<li><p>Dates are converted to a standard date object.</p></li>
+<li><p>Spatial coordinates in Degree Minute Second (DMS) format are converted to a standard DMS format and converted to Decimal Degrees (DD).</p></li>
+<li><p>Aquaprode coded variable names are translated into more readable variable names based on the variable descriptions at <a href="https://www.aquaread.com/sensors" class="external-link">www.aquaread.com/sensors</a>.</p></li>
+</ol>
+</li>
+</ol>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
