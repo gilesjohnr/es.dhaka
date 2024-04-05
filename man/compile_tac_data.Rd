@@ -22,7 +22,7 @@ data.frame
 }
 \description{
 This function consumes .csv files produced by the \code{parse_taq_eds} and \code{parse_taq_xls} and compiles them into a single data set. When compiling, duplicated names are corrected as defined by the data in the
-\code{key} data set included in this package. Adjustments to the Ct values are made using blank samples to control for contamination and relevant RNA/DNA targets as qPCR amplification controls.
+\code{key} data dictionary included in this package. Adjustments to the Ct values are made using blank samples to control for contamination and relevant RNA/DNA targets as qPCR amplification controls.
 }
 \examples{
 \dontrun{

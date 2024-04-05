@@ -1,7 +1,7 @@
 #' Compile TAC data
 #'
 #' This function consumes .csv files produced by the `parse_taq_eds` and `parse_taq_xls` and compiles them into a single data set. When compiling, duplicated names are corrected as defined by the data in the
-#' `key` data set included in this package. Adjustments to the Ct values are made using blank samples to control for contamination and relevant RNA/DNA targets as qPCR amplification controls.
+#' `key` data dictionary included in this package. Adjustments to the Ct values are made using blank samples to control for contamination and relevant RNA/DNA targets as qPCR amplification controls.
 #'
 #' @param path_in A full file path to the directory containing parsed .csv files.
 #' @param path_out A full file path to the location where output files are to be written.

@@ -1,6 +1,10 @@
-pandoc: 3.1.1
+pandoc: 3.1.12.3
 pkgdown: 2.0.7
 pkgdown_sha: ~
-articles: {}
-last_built: 2024-04-04T21:17Z
+articles:
+  processing_es_data: processing_es_data.html
+last_built: 2024-04-05T17:08Z
+urls:
+  reference: https://gilesjohnr.github.io/es.dhaka/reference
+  article: https://gilesjohnr.github.io/es.dhaka/articles
 
