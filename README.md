@@ -22,7 +22,7 @@ The package also contains several important accessory data sets that are require
   * The package also contains several data dictionaries referred to as a `key` that cross reference important information about target names, location names, and standard curve data sets.
      - `key_location_names`: These data cross reference the unique (and sometimes duplicated) location names of sampling sites and a set of 'concise' names that clean up characters and allow combination of duplicated locations.
      - `key_target_names`: These data cross reference the unique (and sometimes duplicated) target names across all Taqman cards to concise target names, relevant control samples, and whether to include the target in the compiled data set.
-     - `key_standard_curves`: These data cross reference each unique experiment name to the appropriate standard curve data souce.
+     - `key_standard_curves`: These data cross reference each unique experiment name to the appropriate standard curve data source.
   
 ## Methods
 
