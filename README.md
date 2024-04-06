@@ -4,7 +4,7 @@
 
 # **es.dhaka**: an R package for processing environmental sampling data
 
-This package provides data and methods for parsing and compiling data sets that measure infectious disease burden using Environmental Sampling (ES) methods. The tools here were developed specifically for ES studies in Dhaka, Bangladesh and are designed to provide data outputs that can be used with the open-source companion package `es` which can be found [HERE](https://gilesjohnr.github.io/es/). An overview of data and methods are outlined below, with more detailed vignettes available [HERE]().
+This package provides data and methods for parsing and compiling data sets that measure infectious disease burden using Environmental Sampling (ES) methods. The tools here were developed specifically for ES studies in Dhaka, Bangladesh and are designed to provide data outputs that can be used with the open-source companion package `es` which can be found [HERE](https://gilesjohnr.github.io/es/). An overview of data and methods are outlined below, with more detailed vignettes available [HERE](https://gilesjohnr.github.io/es.dhaka/articles/processing_es_data.html).
 
 
 ## Data
