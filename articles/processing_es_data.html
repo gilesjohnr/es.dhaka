@@ -6,12 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="es.dhaka">
-<title>Vignette Title • es.dhaka</title>
+<title>Processing data with the `es.dhaka` package • es.dhaka</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Vignette Title">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Processing data with the `es.dhaka` package">
 <meta property="og:description" content="es.dhaka">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -41,7 +41,7 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/processing_es_data.html">Vignette Title</a>
+    <a class="dropdown-item" href="../articles/processing_es_data.html">Processing data with the `es.dhaka` package</a>
   </div>
 </li>
       </ul>
@@ -68,11 +68,8 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>Vignette Title</h1>
-                        <h4 data-toc-skip class="author">Vignette
-Author</h4>
+      <img src="" class="logo" alt=""><h1>Processing data with the `es.dhaka` package</h1>
             
-            <h4 data-toc-skip class="date">2024-04-05</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/gilesjohnr/es.dhaka/blob/HEAD/vignettes/processing_es_data.Rmd" class="external-link"><code>vignettes/processing_es_data.Rmd</code></a></small>
       <div class="d-none name"><code>processing_es_data.Rmd</code></div>
@@ -80,240 +77,235 @@ Author</h4>
 
     
     
-<p>Vignettes are long form documentation commonly included in packages.
-Because they are part of the distribution of the package, they need to
-be as compact as possible. The <code>html_vignette</code> output type
-provides a custom style sheet (and tweaks some options) to ensure that
-the resulting html is as small as possible. The
-<code>html_vignette</code> format:</p>
-<ul>
-<li>Never uses retina figures</li>
-<li>Has a smaller default figure size</li>
-<li>Uses a custom CSS stylesheet instead of the default Twitter
-Bootstrap style</li>
-</ul>
-<div class="section level2">
-<h2 id="vignette-info">Vignette Info<a class="anchor" aria-label="anchor" href="#vignette-info"></a>
-</h2>
-<p>Note the various macros within the <code>vignette</code> section of
-the metadata block above. These are required in order to instruct R how
-to build the vignette. Note that you should change the
-<code>title</code> field and the <code>\VignetteIndexEntry</code> to
-match the title of your vignette.</p>
+<div class="section level3">
+<h3 id="install-package">Install package<a class="anchor" aria-label="anchor" href="#install-package"></a>
+</h3>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'devtools'</span><span class="op">)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">'gilesjohnr/es.dhaka'</span>, dependencies<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gilesjohnr/es.dhaka" class="external-link">es.dhaka</a></span><span class="op">)</span></span></code></pre></div>
 </div>
-<div class="section level2">
-<h2 id="styles">Styles<a class="anchor" aria-label="anchor" href="#styles"></a>
-</h2>
-<p>The <code>html_vignette</code> template includes a basic CSS theme.
-To override this theme you can specify your own CSS in the document
-metadata as follows:</p>
-<pre><code><span><span class="va">output</span><span class="op">:</span> </span>
-<span>  <span class="fu">rmarkdown</span><span class="fu">::</span><span class="va"><a href="https://pkgs.rstudio.com/rmarkdown/reference/html_vignette.html" class="external-link">html_vignette</a></span><span class="op">:</span></span>
-<span>    <span class="va">css</span><span class="op">:</span> <span class="va">mystyles.css</span></span></code></pre>
+<div class="section level3">
+<h3 id="parse-card-level-tac-data">Parse card level TAC data<a class="anchor" aria-label="anchor" href="#parse-card-level-tac-data"></a>
+</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>root <span class="ot">&lt;-</span> <span class="st">'{path to Dropbox}/ES TAC/'</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>paths_xls <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>     <span class="fu">file.path</span>(root, <span class="st">"BEED TAC/EXCEL"</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>     <span class="fu">file.path</span>(root, <span class="st">"ES080217432 - ES090317455 TAC Cards/Excel"</span>),</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>     <span class="fu">file.path</span>(root, <span class="st">"G- TAC Cards for Polio ES/Excel"</span>),</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>     <span class="fu">file.path</span>(root, <span class="st">"Qadri Enteric TAC/EXCEL"</span>),</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>     <span class="fu">file.path</span>(root, <span class="st">"KEPS TAC/EXCEL"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>)</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="fu">parse_tac_xls</span>(<span class="at">path_in =</span> paths_xls,</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a>              <span class="at">path_out =</span> <span class="st">"./test/tac"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>              <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>[<span class="sc">==</span><span class="er">============================================</span>] <span class="dv">100</span>% <span class="sc">|</span> Elapsed<span class="sc">:</span> <span class="dv">00</span><span class="sc">:</span><span class="dv">01</span><span class="sc">:</span><span class="dv">16</span> <span class="sc">|</span> Remaining<span class="sc">:</span>  <span class="dv">0</span>s</span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a>Input .xls files<span class="sc">:</span> <span class="dv">312</span></span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a>Parsed .csv files<span class="sc">:</span> <span class="dv">305</span></span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a>Output here<span class="sc">:</span> <span class="er">/</span>Users<span class="sc">/</span>johngiles<span class="sc">/</span>test<span class="sc">/</span>tac<span class="sc">/</span>raw<span class="sc">/</span>csv</span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a>Warning messages<span class="sc">:</span></span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span> In <span class="fu">parse_tac_xls</span>(<span class="at">path_in =</span> paths_xls, <span class="at">path_out =</span> <span class="st">"./test/tac"</span>,  <span class="sc">:</span></span>
+<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a>  File exclude due to <span class="sc">&gt;</span><span class="dv">1</span> sheet<span class="sc">:</span> </span>
+<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a>.<span class="sc">/</span>Qadri Enteric TAC<span class="sc">/</span>EXCEL<span class="sc">/</span><span class="dv">2022-04-03</span> ES QADRI ENTERIC CARD <span class="fl">111.</span>xls</span>
+<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a><span class="dv">2</span><span class="sc">:</span> In <span class="fu">parse_tac_xls</span>(<span class="at">path_in =</span> paths_xls, <span class="at">path_out =</span> <span class="st">"./test/tac"</span>,  <span class="sc">:</span></span>
+<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a>  File exclude due to <span class="sc">&gt;</span><span class="dv">1</span> sheet<span class="sc">:</span> </span>
+<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a>.<span class="sc">/</span>Qadri Enteric TAC<span class="sc">/</span>EXCEL<span class="sc">/</span><span class="dv">2022-04-05</span> ES QADRI ENTERIC CARD <span class="fl">112.</span>xls</span>
+<span id="cb2-27"><a href="#cb2-27" tabindex="-1"></a><span class="dv">3</span><span class="sc">:</span> In <span class="fu">parse_tac_xls</span>(<span class="at">path_in =</span> paths_xls, <span class="at">path_out =</span> <span class="st">"./test/tac"</span>,  <span class="sc">:</span></span>
+<span id="cb2-28"><a href="#cb2-28" tabindex="-1"></a>  File exclude due to <span class="sc">&gt;</span><span class="dv">1</span> sheet<span class="sc">:</span> </span>
+<span id="cb2-29"><a href="#cb2-29" tabindex="-1"></a>.<span class="sc">/</span>Qadri Enteric TAC<span class="sc">/</span>EXCEL<span class="sc">/</span><span class="dv">2022-04-06</span> ES QADRI ENTERIC CARD <span class="fl">113.</span>xls</span>
+<span id="cb2-30"><a href="#cb2-30" tabindex="-1"></a><span class="dv">4</span><span class="sc">:</span> In <span class="fu">parse_tac_xls</span>(<span class="at">path_in =</span> paths_xls, <span class="at">path_out =</span> <span class="st">"./test/tac"</span>,  <span class="sc">:</span></span>
+<span id="cb2-31"><a href="#cb2-31" tabindex="-1"></a>  File exclude due to <span class="sc">&gt;</span><span class="dv">1</span> sheet<span class="sc">:</span> </span>
+<span id="cb2-32"><a href="#cb2-32" tabindex="-1"></a>.<span class="sc">/</span>KEPS TAC<span class="sc">/</span>EXCEL<span class="sc">/</span><span class="dv">2023-06-06</span> KEPS CARD <span class="cf">for</span> QADRI ENTERIC CARD <span class="fl">27.</span>xls</span>
+<span id="cb2-33"><a href="#cb2-33" tabindex="-1"></a><span class="dv">5</span><span class="sc">:</span> In <span class="fu">parse_tac_xls</span>(<span class="at">path_in =</span> paths_xls, <span class="at">path_out =</span> <span class="st">"./test/tac"</span>,  <span class="sc">:</span></span>
+<span id="cb2-34"><a href="#cb2-34" tabindex="-1"></a>  File exclude due to <span class="sc">&gt;</span><span class="dv">1</span> sheet<span class="sc">:</span> </span>
+<span id="cb2-35"><a href="#cb2-35" tabindex="-1"></a>.<span class="sc">/</span>KEPS TAC<span class="sc">/</span>EXCEL<span class="sc">/</span><span class="dv">2023-06-09</span>_KEPS_Std1.xls</span>
+<span id="cb2-36"><a href="#cb2-36" tabindex="-1"></a><span class="dv">6</span><span class="sc">:</span> In <span class="fu">parse_tac_xls</span>(<span class="at">path_in =</span> paths_xls, <span class="at">path_out =</span> <span class="st">"./test/tac"</span>,  <span class="sc">:</span></span>
+<span id="cb2-37"><a href="#cb2-37" tabindex="-1"></a>  File exclude due to <span class="sc">&gt;</span><span class="dv">1</span> sheet<span class="sc">:</span> </span>
+<span id="cb2-38"><a href="#cb2-38" tabindex="-1"></a>.<span class="sc">/</span>KEPS TAC<span class="sc">/</span>EXCEL<span class="sc">/</span><span class="dv">2023-06-09</span>_KEPS_Std2.xls</span>
+<span id="cb2-39"><a href="#cb2-39" tabindex="-1"></a><span class="dv">7</span><span class="sc">:</span> In <span class="fu">parse_tac_xls</span>(<span class="at">path_in =</span> paths_xls, <span class="at">path_out =</span> <span class="st">"./test/tac"</span>,  <span class="sc">:</span></span>
+<span id="cb2-40"><a href="#cb2-40" tabindex="-1"></a>  File exclude due to <span class="sc">&gt;</span><span class="dv">1</span> sheet<span class="sc">:</span> </span>
+<span id="cb2-41"><a href="#cb2-41" tabindex="-1"></a>.<span class="sc">/</span>KEPS TAC<span class="sc">/</span>EXCEL<span class="sc">/</span><span class="dv">2023-06-09</span>_KEPS_Std3.xls</span></code></pre></div>
+<p>Output includes the original .xls files:
+<img src="figs/Screenshot_1.png" width="90%"></p>
+<p>And reconfigured .csv files containing the raw data:
+<img src="figs/Screenshot_2.png" width="90%"></p>
 </div>
-<div class="section level2">
-<h2 id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<p>The figure sizes have been customised so that you can easily put two
-images side-by-side.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fl">10</span><span class="op">:</span><span class="fl">1</span><span class="op">)</span></span></code></pre></div>
-<p><img src="processing_es_data_files/figure-html/unnamed-chunk-1-1.png" width="700"><img src="processing_es_data_files/figure-html/unnamed-chunk-1-2.png" width="700"></p>
-<p>You can enable figure captions by <code>fig_caption: yes</code> in
-YAML:</p>
-<pre><code><span><span class="va">output</span><span class="op">:</span></span>
-<span>  <span class="fu">rmarkdown</span><span class="fu">::</span><span class="va"><a href="https://pkgs.rstudio.com/rmarkdown/reference/html_vignette.html" class="external-link">html_vignette</a></span><span class="op">:</span></span>
-<span>    <span class="va">fig_caption</span><span class="op">:</span> <span class="va">yes</span></span></code></pre>
-<p>Then you can use the chunk option
-<code>fig.cap = "Your figure caption."</code> in
-<strong>knitr</strong>.</p>
+<div class="section level3">
+<h3 id="compile-tac-data">Compile TAC data<a class="anchor" aria-label="anchor" href="#compile-tac-data"></a>
+</h3>
+<p>Compiling card-level .csv files into a single data set requires the
+<code>key_target_names</code> data dictionary shown here:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">head</span>(es.dhaka<span class="sc">::</span>key_target_names)</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  target_name_unique target_name_concise control include</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="dv">1</span>                <span class="dv">18</span>S                 <span class="dv">18</span>S      <span class="cn">NA</span>       <span class="dv">1</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="dv">2</span>   Adenovirus <span class="dv">40</span><span class="sc">/</span><span class="dv">41</span>    Adenovirus_40_41    PhHV       <span class="dv">1</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="dv">4</span>   Adenovirus_40_41    Adenovirus_40_41    PhHV       <span class="dv">1</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="dv">5</span>   Adenovirus_40<span class="dv">-41</span>    Adenovirus_40_41    PhHV       <span class="dv">1</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="dv">3</span>     Adenovirus pan      Adenovirus_pan    PhHV       <span class="dv">1</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="dv">6</span>          Aeromonas           Aeromonas    PhHV       <span class="dv">1</span></span></code></pre></div>
+<p>Multiple QC steps are performed during compilation:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">compile_tac_data</span>(<span class="at">path_in =</span> <span class="st">"./test/tac/raw/csv"</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>                 <span class="at">path_out =</span> <span class="st">"./test/tac"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>                 <span class="at">key =</span> es.dhaka<span class="sc">::</span>key_target_names,</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>                 <span class="at">tau =</span> <span class="dv">40</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>                 <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>Precheck .csv files</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>Loading .csv files</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>Removing excluded targets</span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>Fixing duplicated target names</span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>[<span class="sc">==</span><span class="er">============================================</span>] <span class="dv">100</span>% <span class="sc">|</span> Elapsed<span class="sc">:</span> <span class="dv">00</span><span class="sc">:</span><span class="dv">02</span><span class="sc">:</span><span class="dv">04</span> <span class="sc">|</span> Remaining<span class="sc">:</span>  <span class="dv">0</span>s</span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a>Editing ct_value responses based on contamination controls</span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>Samples blanks with contaminated observations<span class="sc">:</span> <span class="dv">90</span></span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a> [<span class="dv">1</span>] <span class="st">"BLANK 17.06.2019"</span> <span class="st">"BLANK 24.06.2019"</span> <span class="st">"BLANK 27.06.2019"</span> <span class="st">"BLANK 03.07.2019"</span></span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a> [<span class="dv">5</span>] <span class="st">"BLANK 07.07.2019"</span> <span class="st">"BLANK 10.07.2019"</span> <span class="st">"BLANK 17.07.2019"</span> <span class="st">"BLANK 23.07.2019"</span></span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a> [<span class="dv">9</span>] <span class="st">"Blank 18.08.2019"</span> <span class="st">"BLANK 01.09.2019"</span> <span class="st">"BLANK 08.09.19"</span>   <span class="st">"Blank 15.09.19"</span>  </span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a>[<span class="dv">13</span>] <span class="st">"blank 1.10.2019"</span>  <span class="st">"BLANK 19.12.12"</span>   <span class="st">"BLANK 03.02.20"</span>   <span class="st">"BLANK 13.05.20"</span>  </span>
+<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a>[<span class="dv">17</span>] <span class="st">"BLANK 08.11.2020"</span> <span class="st">"Blank 16.11.20"</span>   <span class="st">"Blank 24.11.20"</span>   <span class="st">"Blank 06.12.2020"</span></span>
+<span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a>[<span class="dv">21</span>] <span class="st">"BLANK 14.12.20"</span>   <span class="st">"Blank 20.12.20"</span>   <span class="st">"BLANK 29.12.2020"</span> <span class="st">"Blank 03.01.2021"</span></span>
+<span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a>[<span class="dv">25</span>] <span class="st">"BLANK 12.01.2021"</span> <span class="st">"BLANK 17.01.2021"</span> <span class="st">"BLANK 24.01.2021"</span> <span class="st">"Blank 28.01.2021"</span></span>
+<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a>[<span class="dv">29</span>] <span class="st">"BLANK 04.02.2021"</span> <span class="st">"Blank 09.02.2021"</span> <span class="st">"BLANK 15.02.2021"</span> <span class="st">"BLANK 18.02.2020"</span></span>
+<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a>[<span class="dv">33</span>] <span class="st">"BLANK 23.02.2021"</span> <span class="st">"Blank-01032021"</span>   <span class="st">"Blank 07.03.2021"</span> <span class="st">"BLANK 11.03.2021"</span></span>
+<span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a>[<span class="dv">37</span>] <span class="st">"BLANK 16.03.21"</span>   <span class="st">"Blank 23.03.21"</span>   <span class="st">"Blank 28.03.2021"</span> <span class="st">"Blank 05.04.2021"</span></span>
+<span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a>[<span class="dv">41</span>] <span class="st">"Blank 11.04.2021"</span> <span class="st">"BLANK 13.04.2021"</span> <span class="st">"BLANK 22.04.2021"</span> <span class="st">"BLANK 25.04.2021"</span></span>
+<span id="cb4-26"><a href="#cb4-26" tabindex="-1"></a>[<span class="dv">45</span>] <span class="st">"BLANK 08.05.2021"</span> <span class="st">"BLANK 05.05.2021"</span> <span class="st">"Blank 11.05.2021"</span> <span class="st">"BLANK 25.05.2021"</span></span>
+<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a>[<span class="dv">49</span>] <span class="st">"Blank 27.05.2021"</span> <span class="st">"Blank 02.06.2021"</span> <span class="st">"BLANK 10.06.2021"</span> <span class="st">"Blank 15.06.2021"</span></span>
+<span id="cb4-28"><a href="#cb4-28" tabindex="-1"></a>[<span class="dv">53</span>] <span class="st">"Blank 21.06.2021"</span> <span class="st">"Blank 28.06.2021"</span> <span class="st">"Blank-5.6.2021"</span>   <span class="st">"Blank 07.07.2021"</span></span>
+<span id="cb4-29"><a href="#cb4-29" tabindex="-1"></a>[<span class="dv">57</span>] <span class="st">"Blank 15.07.2021"</span> <span class="st">"BLANK 20.07.2021"</span> <span class="st">"Blank 27.07.2021"</span> <span class="st">"Blank-02.08.2021"</span></span>
+<span id="cb4-30"><a href="#cb4-30" tabindex="-1"></a>[<span class="dv">61</span>] <span class="st">"BLANK 03.08.2021"</span> <span class="st">"BLANK 04.08.2021"</span> <span class="st">"BLANK 09.08.2021"</span> <span class="st">"Blank 18.08.2021"</span></span>
+<span id="cb4-31"><a href="#cb4-31" tabindex="-1"></a>[<span class="dv">65</span>] <span class="st">"BLANK 22.08.2021"</span> <span class="st">"BLANK 25.08.2022"</span> <span class="st">"BLANK 30.08.2021"</span> <span class="st">"BLANK 01.09.2021"</span></span>
+<span id="cb4-32"><a href="#cb4-32" tabindex="-1"></a>[<span class="dv">69</span>] <span class="st">"BLANK 08.09.2021"</span> <span class="st">"BLANK 16.09.2021"</span> <span class="st">"BLANK 19.09.2021"</span> <span class="st">"BLANK 26.09.2021"</span></span>
+<span id="cb4-33"><a href="#cb4-33" tabindex="-1"></a>[<span class="dv">73</span>] <span class="st">"BLANK 29.09.2021"</span> <span class="st">"Blank 04.10.2021"</span> <span class="st">"BLANK 10.10.2021"</span> <span class="st">"BLANK 17.10.2022"</span></span>
+<span id="cb4-34"><a href="#cb4-34" tabindex="-1"></a>[<span class="dv">77</span>] <span class="st">"Blank 21.10.2021"</span> <span class="st">"Blank 27.10.2021"</span> <span class="st">"Blank 01.11.2021"</span> <span class="st">"Blank 07.11.2021"</span></span>
+<span id="cb4-35"><a href="#cb4-35" tabindex="-1"></a>[<span class="dv">81</span>] <span class="st">"Blank 11.11.2021"</span> <span class="st">"BLANK 17.11.2021"</span> <span class="st">"BLANK 21.11.2021"</span> <span class="st">"Blank 28.11.22"</span>  </span>
+<span id="cb4-36"><a href="#cb4-36" tabindex="-1"></a>[<span class="dv">85</span>] <span class="st">"Blank 01.12.2021"</span> <span class="st">"BLANK 08.12.2021"</span> <span class="st">"BLANK 12.12.2021"</span> <span class="st">"BLANK 20.12.21"</span>  </span>
+<span id="cb4-37"><a href="#cb4-37" tabindex="-1"></a>[<span class="dv">89</span>] <span class="st">"BLANK 26.10.2021"</span> <span class="st">"Blank 02.01.2022"</span></span>
+<span id="cb4-38"><a href="#cb4-38" tabindex="-1"></a>Number observations removed due to contaminated blanks<span class="sc">:</span> <span class="dv">445</span></span>
+<span id="cb4-39"><a href="#cb4-39" tabindex="-1"></a></span>
+<span id="cb4-40"><a href="#cb4-40" tabindex="-1"></a>              <span class="dv">18</span>S       Ancylostoma       Campy_cpn60 Campylobacter_16S </span>
+<span id="cb4-41"><a href="#cb4-41" tabindex="-1"></a>               <span class="dv">21</span>                 <span class="dv">2</span>                 <span class="dv">2</span>                 <span class="dv">1</span> </span>
+<span id="cb4-42"><a href="#cb4-42" tabindex="-1"></a>Campylobacter_pan      Enterobacter     Hs99999901_s1    M_tuberculosis </span>
+<span id="cb4-43"><a href="#cb4-43" tabindex="-1"></a>                <span class="dv">4</span>                <span class="dv">13</span>                <span class="dv">62</span>                 <span class="dv">1</span> </span>
+<span id="cb4-44"><a href="#cb4-44" tabindex="-1"></a>            MS2_1             MS2_2            pan_PV            PhHV_1 </span>
+<span id="cb4-45"><a href="#cb4-45" tabindex="-1"></a>              <span class="dv">153</span>                <span class="dv">16</span>                 <span class="dv">2</span>               <span class="dv">147</span> </span>
+<span id="cb4-46"><a href="#cb4-46" tabindex="-1"></a>           PhHV_2     Shigella_EIEC     Strongyloides </span>
+<span id="cb4-47"><a href="#cb4-47" tabindex="-1"></a>               <span class="dv">19</span>                 <span class="dv">1</span>                 <span class="dv">1</span> </span>
+<span id="cb4-48"><a href="#cb4-48" tabindex="-1"></a>Editing ct_value responses based on amplification controls</span>
+<span id="cb4-49"><a href="#cb4-49" tabindex="-1"></a>[<span class="sc">==</span><span class="er">============================================</span>] <span class="dv">100</span>% <span class="sc">|</span> Elapsed<span class="sc">:</span> <span class="dv">00</span><span class="sc">:</span><span class="dv">13</span><span class="sc">:</span><span class="dv">58</span> <span class="sc">|</span> Remaining<span class="sc">:</span>  <span class="dv">0</span>s</span>
+<span id="cb4-50"><a href="#cb4-50" tabindex="-1"></a></span>
+<span id="cb4-51"><a href="#cb4-51" tabindex="-1"></a>Cleaning up remaining <span class="st">'Undetermined'</span> observations</span>
+<span id="cb4-52"><a href="#cb4-52" tabindex="-1"></a>Parsing sample id</span>
+<span id="cb4-53"><a href="#cb4-53" tabindex="-1"></a>Final data<span class="sc">:</span></span>
+<span id="cb4-54"><a href="#cb4-54" tabindex="-1"></a><span class="st">'data.frame'</span><span class="sc">:</span>   <span class="dv">153652</span> obs. of  <span class="dv">10</span> variables<span class="sc">:</span></span>
+<span id="cb4-55"><a href="#cb4-55" tabindex="-1"></a> <span class="er">$</span> experiment_name   <span class="sc">:</span> chr  <span class="st">"G- ES TAC CARD 01"</span> <span class="st">"G- ES TAC CARD 01"</span> <span class="st">"G- ES TAC CARD 01"</span> <span class="st">"G- ES TAC CARD 01"</span> ...</span>
+<span id="cb4-56"><a href="#cb4-56" tabindex="-1"></a> <span class="sc">$</span> experiment_barcode<span class="sc">:</span> chr  <span class="st">"B25430408"</span> <span class="st">"B25430408"</span> <span class="st">"B25430408"</span> <span class="st">"B25430408"</span> ...</span>
+<span id="cb4-57"><a href="#cb4-57" tabindex="-1"></a> <span class="sc">$</span> experiment_date   <span class="sc">:</span> IDate, format<span class="sc">:</span> <span class="st">"2019-06-19"</span> <span class="st">"2019-06-19"</span> ...</span>
+<span id="cb4-58"><a href="#cb4-58" tabindex="-1"></a> <span class="sc">$</span> well              <span class="sc">:</span> int  <span class="dv">1</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">2</span> <span class="dv">3</span> <span class="dv">3</span> <span class="dv">4</span> <span class="dv">5</span> <span class="dv">6</span> <span class="dv">7</span> ...</span>
+<span id="cb4-59"><a href="#cb4-59" tabindex="-1"></a> <span class="sc">$</span> well_position     <span class="sc">:</span> chr  <span class="st">"A1"</span> <span class="st">"A1"</span> <span class="st">"A2"</span> <span class="st">"A2"</span> ...</span>
+<span id="cb4-60"><a href="#cb4-60" tabindex="-1"></a> <span class="sc">$</span> sample_id         <span class="sc">:</span> chr  <span class="st">"ES08010-09JUN19-ES080101001-ES_TNA-217283-"</span> <span class="st">"ES08010-09JUN19-ES080101001-ES_TNA-217283-"</span> <span class="st">"ES08010-09JUN19-ES080101001-ES_TNA-217283-"</span> <span class="st">"ES08010-09JUN19-ES080101001-ES_TNA-217283-"</span> ...</span>
+<span id="cb4-61"><a href="#cb4-61" tabindex="-1"></a> <span class="sc">$</span> sample_date       <span class="sc">:</span> Date, format<span class="sc">:</span> <span class="st">"2019-06-09"</span> <span class="st">"2019-06-09"</span> ...</span>
+<span id="cb4-62"><a href="#cb4-62" tabindex="-1"></a> <span class="sc">$</span> aquaprobe_id      <span class="sc">:</span> chr  <span class="st">"ES080101001"</span> <span class="st">"ES080101001"</span> <span class="st">"ES080101001"</span> <span class="st">"ES080101001"</span> ...</span>
+<span id="cb4-63"><a href="#cb4-63" tabindex="-1"></a> <span class="sc">$</span> target_name       <span class="sc">:</span> chr  <span class="st">"Ancylostoma"</span> <span class="st">"Necator"</span> <span class="st">"E_bieneusi"</span> <span class="st">"E_intestinalis"</span> ...</span>
+<span id="cb4-64"><a href="#cb4-64" tabindex="-1"></a> <span class="sc">$</span> ct_value          <span class="sc">:</span> num  <span class="dv">40</span> <span class="dv">40</span> <span class="dv">40</span> <span class="dv">40</span> <span class="fl">31.1</span> ...</span>
+<span id="cb4-65"><a href="#cb4-65" tabindex="-1"></a>Compiled TAC data is here<span class="sc">:</span> <span class="er">/</span>Users<span class="sc">/</span>johngiles<span class="sc">/</span>tests<span class="sc">/</span>test<span class="sc">/</span>tac<span class="sc">/</span>compiled_tac.csv</span></code></pre></div>
 </div>
-<div class="section level2">
-<h2 id="more-examples">More Examples<a class="anchor" aria-label="anchor" href="#more-examples"></a>
-</h2>
-<p>You can write math expressions, e.g. <span class="math inline">\(Y =
-X\beta + \epsilon\)</span>, footnotes<a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;A footnote here.&lt;/p&gt;"><sup>1</sup></a>, and tables, e.g. using
-<code><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">knitr::kable()</a></code>.</p>
-<table style="width:100%;" class="table">
-<colgroup>
-<col width="25%">
-<col width="7%">
-<col width="5%">
-<col width="8%">
-<col width="5%">
-<col width="7%">
-<col width="8%">
-<col width="8%">
-<col width="4%">
-<col width="4%">
-<col width="7%">
-<col width="7%">
-</colgroup>
-<thead><tr class="header">
-<th align="left"></th>
-<th align="right">mpg</th>
-<th align="right">cyl</th>
-<th align="right">disp</th>
-<th align="right">hp</th>
-<th align="right">drat</th>
-<th align="right">wt</th>
-<th align="right">qsec</th>
-<th align="right">vs</th>
-<th align="right">am</th>
-<th align="right">gear</th>
-<th align="right">carb</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td align="left">Mazda RX4</td>
-<td align="right">21.0</td>
-<td align="right">6</td>
-<td align="right">160.0</td>
-<td align="right">110</td>
-<td align="right">3.90</td>
-<td align="right">2.620</td>
-<td align="right">16.46</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">4</td>
-<td align="right">4</td>
-</tr>
-<tr class="even">
-<td align="left">Mazda RX4 Wag</td>
-<td align="right">21.0</td>
-<td align="right">6</td>
-<td align="right">160.0</td>
-<td align="right">110</td>
-<td align="right">3.90</td>
-<td align="right">2.875</td>
-<td align="right">17.02</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">4</td>
-<td align="right">4</td>
-</tr>
-<tr class="odd">
-<td align="left">Datsun 710</td>
-<td align="right">22.8</td>
-<td align="right">4</td>
-<td align="right">108.0</td>
-<td align="right">93</td>
-<td align="right">3.85</td>
-<td align="right">2.320</td>
-<td align="right">18.61</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">4</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="left">Hornet 4 Drive</td>
-<td align="right">21.4</td>
-<td align="right">6</td>
-<td align="right">258.0</td>
-<td align="right">110</td>
-<td align="right">3.08</td>
-<td align="right">3.215</td>
-<td align="right">19.44</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">3</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Hornet Sportabout</td>
-<td align="right">18.7</td>
-<td align="right">8</td>
-<td align="right">360.0</td>
-<td align="right">175</td>
-<td align="right">3.15</td>
-<td align="right">3.440</td>
-<td align="right">17.02</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">3</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="left">Valiant</td>
-<td align="right">18.1</td>
-<td align="right">6</td>
-<td align="right">225.0</td>
-<td align="right">105</td>
-<td align="right">2.76</td>
-<td align="right">3.460</td>
-<td align="right">20.22</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">3</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">Duster 360</td>
-<td align="right">14.3</td>
-<td align="right">8</td>
-<td align="right">360.0</td>
-<td align="right">245</td>
-<td align="right">3.21</td>
-<td align="right">3.570</td>
-<td align="right">15.84</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">3</td>
-<td align="right">4</td>
-</tr>
-<tr class="even">
-<td align="left">Merc 240D</td>
-<td align="right">24.4</td>
-<td align="right">4</td>
-<td align="right">146.7</td>
-<td align="right">62</td>
-<td align="right">3.69</td>
-<td align="right">3.190</td>
-<td align="right">20.00</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">4</td>
-<td align="right">2</td>
-</tr>
-<tr class="odd">
-<td align="left">Merc 230</td>
-<td align="right">22.8</td>
-<td align="right">4</td>
-<td align="right">140.8</td>
-<td align="right">95</td>
-<td align="right">3.92</td>
-<td align="right">3.150</td>
-<td align="right">22.90</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">4</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="left">Merc 280</td>
-<td align="right">19.2</td>
-<td align="right">6</td>
-<td align="right">167.6</td>
-<td align="right">123</td>
-<td align="right">3.92</td>
-<td align="right">3.440</td>
-<td align="right">18.30</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">4</td>
-<td align="right">4</td>
-</tr>
-</tbody>
-</table>
-<p>Also a quote using <code>&gt;</code>:</p>
-<blockquote>
-<p>“He who gives up [code] safety for [code] speed deserves neither.”
-(<a href="https://twitter.com/hadleywickham/status/504368538874703872" class="external-link">via</a>)</p>
-</blockquote>
+<div class="section level3">
+<h3 id="parse-aquaprobe-data">Parse Aquaprobe data<a class="anchor" aria-label="anchor" href="#parse-aquaprobe-data"></a>
+</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>root <span class="ot">&lt;-</span> <span class="st">'{path to Dropbox}/ES TAC/'</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>paths_aqua <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>     <span class="fu">file.path</span>(root, <span class="st">"TAC final QC MT/Aquaprobe/COVID-19 AQUAPROBE &amp; WATER COLLECTION DATA.xlsx"</span>),</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>     <span class="fu">file.path</span>(root, <span class="st">"TAC final QC MT/Aquaprobe/AQUAPROBE2.xlsx"</span>),</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>     <span class="fu">file.path</span>(root, <span class="st">"TAC final QC MT/Aquaprobe/Missing AquaProbe Data.xlsx"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>)</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="fu">parse_aquaprobe_xlsx</span>(</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>     <span class="at">path_in =</span> paths_aqua,</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>     <span class="at">path_out =</span> <span class="st">"./test/aqua"</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>)</span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>.<span class="sc">/</span>TAC final QC MT<span class="sc">/</span>Aquaprobe<span class="sc">/</span>COVID<span class="dv">-19</span> AQUAPROBE <span class="sc">&amp;</span> WATER COLLECTION DATA.xlsx</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a>.<span class="sc">/</span>TAC final QC MT<span class="sc">/</span>Aquaprobe<span class="sc">/</span>AQUAPROBE2.xlsx</span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a>.<span class="sc">/</span>TAC final QC MT<span class="sc">/</span>Aquaprobe<span class="sc">/</span>Missing AquaProbe Data.xlsx</span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a>Input .xlsx files<span class="sc">:</span> <span class="dv">3</span>                                                             </span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a>Parsed .csv files<span class="sc">:</span> <span class="dv">3</span></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>Output here<span class="sc">:</span> .<span class="sc">/</span>test<span class="sc">/</span>aqua<span class="sc">/</span>raw<span class="sc">/</span>csv</span></code></pre></div>
 </div>
-
+<div class="section level3">
+<h3 id="compile-aquaprobe-data">Compile Aquaprobe data<a class="anchor" aria-label="anchor" href="#compile-aquaprobe-data"></a>
+</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">compile_aquaprobe_data</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>     <span class="at">path_in =</span> <span class="fu">c</span>(<span class="st">"./test/aqua/raw/csv/COVID-19 AQUAPROBE &amp; WATER COLLECTION DATA.csv"</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>                 <span class="st">"./test/aqua/raw/csv/AQUAPROBE2.csv"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>                 <span class="st">"./test/aqua/raw/csv/Missing AquaProbe Data.csv"</span>),</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>     <span class="at">path_out =</span> <span class="st">"./test/aqua"</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>)</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>.<span class="sc">/</span>test<span class="sc">/</span>aqua<span class="sc">/</span>raw<span class="sc">/</span>csv<span class="sc">/</span>COVID<span class="dv">-19</span> AQUAPROBE <span class="sc">&amp;</span> WATER COLLECTION DATA.csv</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>.<span class="sc">/</span>test<span class="sc">/</span>aqua<span class="sc">/</span>raw<span class="sc">/</span>csv<span class="sc">/</span>AQUAPROBE2.csv</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>.<span class="sc">/</span>test<span class="sc">/</span>aqua<span class="sc">/</span>raw<span class="sc">/</span>csv<span class="sc">/</span>Missing AquaProbe Data.csv</span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>Consolidating duplicated measurements</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>Converting dates</span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>Converting spatial coordinates</span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>Cleaning up</span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a>Compiled aquaprobe data is here<span class="sc">:</span> .<span class="sc">/</span>test<span class="sc">/</span>aqua<span class="sc">/</span>compiled_aquaprobe.csv</span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="merge-compiled-tac-data-and-compiled-aquaprobe-data">Merge compiled TAC data and compiled Aquaprobe data<a class="anchor" aria-label="anchor" href="#merge-compiled-tac-data-and-compiled-aquaprobe-data"></a>
+</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>compiled_tac <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(data.table<span class="sc">::</span><span class="fu">fread</span>(<span class="st">'./test/tac/compiled_tac.csv'</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>compiled_aqua <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(data.table<span class="sc">::</span><span class="fu">fread</span>(<span class="st">'./test/aqua/compiled_aquaprobe.csv'</span>))</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">merge</span>(compiled_tac, compiled_aqua, <span class="at">by=</span><span class="st">'aquaprobe_id'</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>data.table<span class="sc">::</span><span class="fu">fwrite</span>(d, <span class="at">file=</span><span class="st">'./test/compiled.csv'</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="fu">str</span>(d)</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="st">'data.frame'</span><span class="sc">:</span>   <span class="dv">151352</span> obs. of  <span class="dv">37</span> variables<span class="sc">:</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a> <span class="er">$</span> aquaprobe_id                       <span class="sc">:</span> chr  <span class="st">"E0108010001"</span> <span class="st">"E0108010001"</span> <span class="st">"E0108010001"</span> <span class="st">"E0108010001"</span> ...</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a> <span class="sc">$</span> experiment_name                    <span class="sc">:</span> chr  <span class="st">"ES QADRI ENTERIC CARD 04"</span> <span class="st">"ES QADRI ENTERIC CARD 04"</span> <span class="st">"ES QADRI ENTERIC CARD 04"</span> <span class="st">"ES QADRI ENTERIC CARD 04"</span> ...</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a> <span class="sc">$</span> experiment_barcode                 <span class="sc">:</span> chr  <span class="st">"B41120251"</span> <span class="st">"B41120251"</span> <span class="st">"B41120251"</span> <span class="st">"B41120251"</span> ...</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a> <span class="sc">$</span> experiment_date                    <span class="sc">:</span> IDate, format<span class="sc">:</span> <span class="st">"2021-02-02"</span> ...</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a> <span class="sc">$</span> well                               <span class="sc">:</span> int  <span class="dv">119</span> <span class="dv">116</span> <span class="dv">118</span> <span class="dv">97</span> <span class="dv">98</span> <span class="dv">117</span> <span class="dv">97</span> <span class="dv">99</span> <span class="dv">100</span> <span class="dv">98</span> ...</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a> <span class="sc">$</span> well_position                      <span class="sc">:</span> chr  <span class="st">"E23"</span> <span class="st">"E20"</span> <span class="st">"E22"</span> <span class="st">"E1"</span> ...</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a> <span class="sc">$</span> sample_id                          <span class="sc">:</span> chr  <span class="st">"E010801-02NOV20-E0108010001-ES-COV-TNA-249076-"</span> <span class="st">"E010801-02NOV20-E0108010001-ES-COV-TNA-249076-"</span> <span class="st">"E010801-02NOV20-E0108010001-ES-COV-TNA-249076-"</span> <span class="st">"E010801-02NOV20-E0108010001-ES-COV-TNA-249076-"</span> ...</span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a> <span class="sc">$</span> sample_date                        <span class="sc">:</span> IDate, format<span class="sc">:</span> <span class="st">"2020-11-02"</span> ...</span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a> <span class="sc">$</span> target_name                        <span class="sc">:</span> chr  <span class="st">"Norovirus_GI"</span> <span class="st">"PhHV_1"</span> <span class="st">"Sapovirus_124"</span> <span class="st">"Schistosoma"</span> ...</span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a> <span class="sc">$</span> ct_value                           <span class="sc">:</span> num  <span class="fl">31.3</span> <span class="cn">NA</span> <span class="fl">29.7</span> <span class="cn">NA</span> <span class="cn">NA</span> ...</span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a> <span class="sc">$</span> temperature                        <span class="sc">:</span> num  <span class="fl">28.7</span> <span class="fl">28.7</span> <span class="fl">28.7</span> <span class="fl">28.7</span> <span class="fl">28.7</span> <span class="fl">28.7</span> <span class="fl">28.7</span> <span class="fl">28.7</span> <span class="fl">28.7</span> <span class="fl">28.7</span> ...</span>
+<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a> <span class="sc">$</span> barometric_pressure                <span class="sc">:</span> num  <span class="dv">1015</span> <span class="dv">1015</span> <span class="dv">1015</span> <span class="dv">1015</span> <span class="dv">1015</span> ...</span>
+<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a> <span class="sc">$</span> depth                              <span class="sc">:</span> num  <span class="fl">0.025</span> <span class="fl">0.025</span> <span class="fl">0.025</span> <span class="fl">0.025</span> <span class="fl">0.025</span> ...</span>
+<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a> <span class="sc">$</span> ph                                 <span class="sc">:</span> num  <span class="fl">7.58</span> <span class="fl">7.58</span> <span class="fl">7.58</span> <span class="fl">7.58</span> <span class="fl">7.58</span> <span class="fl">7.58</span> <span class="fl">7.58</span> <span class="fl">7.58</span> <span class="fl">7.58</span> <span class="fl">7.58</span> ...</span>
+<span id="cb7-23"><a href="#cb7-23" tabindex="-1"></a> <span class="sc">$</span> ph_millivolt                       <span class="sc">:</span> num  <span class="sc">-</span><span class="dv">58</span> <span class="sc">-</span><span class="dv">58</span> <span class="sc">-</span><span class="dv">58</span> <span class="sc">-</span><span class="dv">58</span> <span class="sc">-</span><span class="dv">58</span> ...</span>
+<span id="cb7-24"><a href="#cb7-24" tabindex="-1"></a> <span class="sc">$</span> oxidation_reduction_potential      <span class="sc">:</span> num  <span class="sc">-</span><span class="fl">74.8</span> <span class="sc">-</span><span class="fl">74.8</span> <span class="sc">-</span><span class="fl">74.8</span> <span class="sc">-</span><span class="fl">74.8</span> <span class="sc">-</span><span class="fl">74.8</span> ...</span>
+<span id="cb7-25"><a href="#cb7-25" tabindex="-1"></a> <span class="sc">$</span> dissolved_oxygen_percent_saturation<span class="sc">:</span> num  <span class="dv">19</span> <span class="dv">19</span> <span class="dv">19</span> <span class="dv">19</span> <span class="dv">19</span> <span class="dv">19</span> <span class="dv">19</span> <span class="dv">19</span> <span class="dv">19</span> <span class="dv">19</span> ...</span>
+<span id="cb7-26"><a href="#cb7-26" tabindex="-1"></a> <span class="sc">$</span> dissolved_oxygen_mg_l              <span class="sc">:</span> num  <span class="fl">1.47</span> <span class="fl">1.47</span> <span class="fl">1.47</span> <span class="fl">1.47</span> <span class="fl">1.47</span> <span class="fl">1.47</span> <span class="fl">1.47</span> <span class="fl">1.47</span> <span class="fl">1.47</span> <span class="fl">1.47</span> ...</span>
+<span id="cb7-27"><a href="#cb7-27" tabindex="-1"></a> <span class="sc">$</span> electrical_conductivity            <span class="sc">:</span> num  <span class="dv">546</span> <span class="dv">546</span> <span class="dv">546</span> <span class="dv">546</span> <span class="dv">546</span> ...</span>
+<span id="cb7-28"><a href="#cb7-28" tabindex="-1"></a> <span class="sc">$</span> resistivity                        <span class="sc">:</span> num  <span class="dv">1710</span> <span class="dv">1710</span> <span class="dv">1710</span> <span class="dv">1710</span> <span class="dv">1710</span> ...</span>
+<span id="cb7-29"><a href="#cb7-29" tabindex="-1"></a> <span class="sc">$</span> total_dissolved_solids             <span class="sc">:</span> num  <span class="dv">354</span> <span class="dv">354</span> <span class="dv">354</span> <span class="dv">354</span> <span class="dv">354</span> <span class="dv">354</span> <span class="dv">354</span> <span class="dv">354</span> <span class="dv">354</span> <span class="dv">354</span> ...</span>
+<span id="cb7-30"><a href="#cb7-30" tabindex="-1"></a> <span class="sc">$</span> salinity                           <span class="sc">:</span> num  <span class="fl">0.23</span> <span class="fl">0.23</span> <span class="fl">0.23</span> <span class="fl">0.23</span> <span class="fl">0.23</span> <span class="fl">0.23</span> <span class="fl">0.23</span> <span class="fl">0.23</span> <span class="fl">0.23</span> <span class="fl">0.23</span> ...</span>
+<span id="cb7-31"><a href="#cb7-31" tabindex="-1"></a> <span class="sc">$</span> specific_gravity                   <span class="sc">:</span> num  <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> ...</span>
+<span id="cb7-32"><a href="#cb7-32" tabindex="-1"></a> <span class="sc">$</span> turbidity                          <span class="sc">:</span> num  <span class="dv">167</span> <span class="dv">167</span> <span class="dv">167</span> <span class="dv">167</span> <span class="dv">167</span> <span class="dv">167</span> <span class="dv">167</span> <span class="dv">167</span> <span class="dv">167</span> <span class="dv">167</span> ...</span>
+<span id="cb7-33"><a href="#cb7-33" tabindex="-1"></a> <span class="sc">$</span> altitude                           <span class="sc">:</span> num  <span class="fl">4.5</span> <span class="fl">4.5</span> <span class="fl">4.5</span> <span class="fl">4.5</span> <span class="fl">4.5</span> <span class="fl">4.5</span> <span class="fl">4.5</span> <span class="fl">4.5</span> <span class="fl">4.5</span> <span class="fl">4.5</span> ...</span>
+<span id="cb7-34"><a href="#cb7-34" tabindex="-1"></a> <span class="sc">$</span> location_name                      <span class="sc">:</span> chr  <span class="st">"SWITCH GATE, BERIBADH"</span> <span class="st">"SWITCH GATE, BERIBADH"</span> <span class="st">"SWITCH GATE, BERIBADH"</span> <span class="st">"SWITCH GATE, BERIBADH"</span> ...</span>
+<span id="cb7-35"><a href="#cb7-35" tabindex="-1"></a> <span class="sc">$</span> ward_id                            <span class="sc">:</span> int  <span class="dv">8</span> <span class="dv">8</span> <span class="dv">8</span> <span class="dv">8</span> <span class="dv">8</span> <span class="dv">8</span> <span class="dv">8</span> <span class="dv">8</span> <span class="dv">8</span> <span class="dv">8</span> ...</span>
+<span id="cb7-36"><a href="#cb7-36" tabindex="-1"></a> <span class="sc">$</span> location_id                        <span class="sc">:</span> int  <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">1</span> ...</span>
+<span id="cb7-37"><a href="#cb7-37" tabindex="-1"></a> <span class="sc">$</span> liters_water_collected             <span class="sc">:</span> num  <span class="fl">6.5</span> <span class="fl">6.5</span> <span class="fl">6.5</span> <span class="fl">6.5</span> <span class="fl">6.5</span> <span class="fl">6.5</span> <span class="fl">6.5</span> <span class="fl">6.5</span> <span class="fl">6.5</span> <span class="fl">6.5</span> ...</span>
+<span id="cb7-38"><a href="#cb7-38" tabindex="-1"></a> <span class="sc">$</span> liters_water_through_filter        <span class="sc">:</span> num  <span class="dv">6</span> <span class="dv">6</span> <span class="dv">6</span> <span class="dv">6</span> <span class="dv">6</span> <span class="dv">6</span> <span class="dv">6</span> <span class="dv">6</span> <span class="dv">6</span> <span class="dv">6</span> ...</span>
+<span id="cb7-39"><a href="#cb7-39" tabindex="-1"></a> <span class="sc">$</span> liters_water_left_in_bag           <span class="sc">:</span> num  <span class="fl">0.5</span> <span class="fl">0.5</span> <span class="fl">0.5</span> <span class="fl">0.5</span> <span class="fl">0.5</span> <span class="fl">0.5</span> <span class="fl">0.5</span> <span class="fl">0.5</span> <span class="fl">0.5</span> <span class="fl">0.5</span> ...</span>
+<span id="cb7-40"><a href="#cb7-40" tabindex="-1"></a> <span class="sc">$</span> aquaprobe_file_name                <span class="sc">:</span> chr  <span class="st">"COVID-19 AQUAPROBE &amp; WATER COLLECTION DATA"</span> <span class="st">"COVID-19 AQUAPROBE &amp; WATER COLLECTION DATA"</span> <span class="st">"COVID-19 AQUAPROBE &amp; WATER COLLECTION DATA"</span> <span class="st">"COVID-19 AQUAPROBE &amp; WATER COLLECTION DATA"</span> ...</span>
+<span id="cb7-41"><a href="#cb7-41" tabindex="-1"></a> <span class="sc">$</span> aquaprobe_date                     <span class="sc">:</span> IDate, format<span class="sc">:</span> <span class="cn">NA</span> ...</span>
+<span id="cb7-42"><a href="#cb7-42" tabindex="-1"></a> <span class="sc">$</span> lat_dms                            <span class="sc">:</span> chr  <span class="st">"23d47'59.616</span><span class="sc">\"\"</span><span class="st">N"</span> <span class="st">"23d47'59.616</span><span class="sc">\"\"</span><span class="st">N"</span> <span class="st">"23d47'59.616</span><span class="sc">\"\"</span><span class="st">N"</span> <span class="st">"23d47'59.616</span><span class="sc">\"\"</span><span class="st">N"</span> ...</span>
+<span id="cb7-43"><a href="#cb7-43" tabindex="-1"></a> <span class="sc">$</span> lat_dd                             <span class="sc">:</span> num  <span class="fl">23.8</span> <span class="fl">23.8</span> <span class="fl">23.8</span> <span class="fl">23.8</span> <span class="fl">23.8</span> ...</span>
+<span id="cb7-44"><a href="#cb7-44" tabindex="-1"></a> <span class="sc">$</span> lon_dms                            <span class="sc">:</span> chr  <span class="st">"90d20'37.308</span><span class="sc">\"\"</span><span class="st">E"</span> <span class="st">"90d20'37.308</span><span class="sc">\"\"</span><span class="st">E"</span> <span class="st">"90d20'37.308</span><span class="sc">\"\"</span><span class="st">E"</span> <span class="st">"90d20'37.308</span><span class="sc">\"\"</span><span class="st">E"</span> ...</span>
+<span id="cb7-45"><a href="#cb7-45" tabindex="-1"></a> <span class="sc">$</span> lon_dd                             <span class="sc">:</span> num  <span class="fl">90.3</span> <span class="fl">90.3</span> <span class="fl">90.3</span> <span class="fl">90.3</span> <span class="fl">90.3</span> ...</span></code></pre></div>
+</div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
 </div>
